@@ -1,5 +1,5 @@
 require 'spec_helper'
-require File.expand_path("../../lib/slugity", __FILE__)
+require 'slugity'
 
 test_strings = {
   "Hello World" => "hello-world",

@@ -1,5 +1,5 @@
 require 'spec_helper'
-require File.expand_path("../../../lib/slugity/utilities", __FILE__)
+require 'slugity/utilities'
 
 describe Slugity::Util do
 
