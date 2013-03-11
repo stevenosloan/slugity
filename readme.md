@@ -68,7 +68,7 @@ If there is any thing you'd like to contribute or fix, please:
 
 - Fork the repo
 - Make your changes
-- Add Cucumber tests for any new functionality
+- Add tests for any new functionality
 - Verify all existing tests work properly
 - Make a pull request
 
