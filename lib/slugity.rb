@@ -1,4 +1,5 @@
 require 'slugity/utilities'
+require 'slugity/matchers'
 
 module Slugity
 
@@ -7,9 +8,13 @@ module Slugity
 	# @param string [String] the string to slugity
 	# @return [String] the slug version of the provided string
   def slugity string
-  	string = Util.trim_string( string )
+  	string = Util.trim_string( string ).downcase
 
-    string.downcase.gsub(/\s|\//, '-').gsub(/\.|\'|\"|\<|\>|,|\(|\)|\:/,'').gsub(/\&/,'and').gsub(/\+/,'plus').gsub(/\=/,'equals')
+    Slugity.matchers.each do |match,replacement|
+      string.gsub!( match, replacement )
+    end
+
+    return string
   end
 
 end
