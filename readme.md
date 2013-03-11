@@ -1,3 +1,10 @@
+Description
+===========
+
+Yet another slugging gem, this one makes sure you want to extend the String class instead of assuming.
+
+---
+
 Instalation
 ===========
 
