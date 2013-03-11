@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.version       = Slugity::VERSION
   s.platform      = Gem::Platform::RUBY
   
-  s.summary       = 'Another slugging gem'
-  s.description   = %q{ A slugging gem that doesn't assume you want to extend the String class, untill you do }
+  s.summary       = 'Yet another slugging gem'
+  s.description   = %q{ Yet another slugging gem, this one makes sure you want to extend the String class instead of assuming. }
   s.authors       = ["Steven Sloan"]
   s.email         = 'stevenosloan@gmail.com'
   s.homepage      = "http://github.com/stevenosloan/slugity"
