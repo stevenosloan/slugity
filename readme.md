@@ -47,7 +47,7 @@ require 'slugity/extend_string'
 
 "one & one".to_slug
 # => one-and-one
-
+```
 
 Testing
 =======
