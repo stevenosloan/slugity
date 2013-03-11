@@ -6,7 +6,9 @@ test_strings = {
   "one Flew_South" => "one-flew_south",
   "Attr: Halp" => "attr-halp",
   "Freddie & Bananas" => "freddie-and-bananas",
-  "One + Two = Three" => "one-plus-two-equals-three"
+  "One + Two = Three" => "one-plus-two-equals-three",
+  " hello world" => "hello-world",
+  "hello world " => "hello-world"
 }
 
 describe Slugity do
