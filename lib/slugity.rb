@@ -10,9 +10,11 @@ module Slugity
   def slugity string
   	string = Util.trim_string( string ).downcase
 
-    Slugity.matchers.each do |match,replacement|
+    Slugity::Matchers.default.each do |match,replacement|
       string.gsub!( match, replacement )
     end
+
+    string.gsub!( /[^a-zA-Z0-9\-\_]/, '' )
 
     return string
   end

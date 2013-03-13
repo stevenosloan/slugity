@@ -1,24 +1,23 @@
 module Slugity
+  class Matchers
 
-  # set default matchers
-  @@matchers = {
-    /\s|\// => '-',
-    /\.|\'|\"|\<|\>|\,|\(|\)|\:/ => '',
-    /\&/ => 'and',
-    /\+/ => 'plus',
-    /\=/ => 'equals'
-  }
-
-  class << self
-
-    def set_matcher matcher, replacement
-      @@matchers[matcher] = replacement
+    # set default matchers
+    # @return [Hash]
+    def self.default
+      {
+        /\s|\// => '-',
+        /\.|\'|\"|\<|\>|\,|\(|\)|\:/ => '',
+        /\&/ => 'and',
+        /\+/ => 'plus',
+        /\=/ => 'equals'
+      }
     end
 
-    def matchers
-      @@matchers
+    # instatiate a new matchers class
+    # @param use_defaults? [Boolean] if the matcher should be seeded with defaults
+    def initialize use_defaults=true
+      @matchers = ( use_defaults ) ? self.default : {}
     end
 
   end
-
 end

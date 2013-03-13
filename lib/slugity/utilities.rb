@@ -11,11 +11,11 @@ module Slugity
 
         # capture spaces at the begining or end of the string
         pattern = /(^\s+|\s+$)/
-      
+
         # strip characters that match the pattern
         string.gsub( pattern, '' )
       end
-    
+
     end
 
   end

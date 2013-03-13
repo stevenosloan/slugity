@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'spec_helper'
 require 'slugity'
 
@@ -20,6 +22,10 @@ describe Slugity do
       test_strings.each do |input,output|
         slugity( input ).should == output
       end
+    end
+
+    it "strips unrecognized characters" do
+      slugity( "aëòúi".encode("UTF-8") ).should == "ai"
     end
   end
 

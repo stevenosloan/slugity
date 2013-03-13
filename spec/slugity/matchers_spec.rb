@@ -1,18 +1,18 @@
 require 'spec_helper'
 require 'slugity'
 
-describe Slugity do
+describe Slugity::Matchers do
+  include Slugity
 
-  describe '#matchers' do
+  describe '#default_matchers' do
 
     it 'returns a hash table' do
-      Slugity.matchers.class.should == Hash
+      Slugity::Matchers.default.class.should == Hash
     end
 
   end
 
   describe '#set_matcher' do
-    include Slugity
 
     it 'allows custom matchers to be set' do
       Slugity.set_matcher( /\%/, 'percent' )
