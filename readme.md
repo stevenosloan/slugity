@@ -1,12 +1,12 @@
 Description
 ===========
 
-Yet another slugging gem, this one makes sure you want to extend the String class instead of assuming.
+Yet another slugging gem. One that lets set custom matchers and doesn't assume you want to extend the String class.
 
 ---
 
-Instalation
-===========
+Installation
+============
 
 ```bash
 gem install slugity
@@ -30,6 +30,37 @@ then gives you access to the `slugity` method. The `slugity` method takes a stri
 To include the `to_slug` method on the `String` class
 ```ruby
 require 'slugity/extend_string'
+```
+
+### Custom Matchers
+
+The default matcher set is currently small, but with custom matchers you can extend it or write a new set from the ground up.
+
+```ruby
+default: {
+  /\s|\// => '-',
+  /\.|\'|\"|\<|\>|\,|\(|\)|\:/ => '',
+  /\&/ => 'and',
+  /\+/ => 'plus',
+  /\=/ => 'equals'
+}
+```
+
+Lets say we want to use the default matchers, but we want exclamation marks to become 'omg'
+
+```ruby
+Slugity::Matchers.add :omg, true, {
+  /\!/ => "omg"
+}
+```
+We created a new matcher named `:omg`, told it to extend from the default matcher, and then added a matcher for the exclamation mark. To use it, we then tell the `slugity` or `to_slug` method to use our new matcher.
+
+```ruby
+slugity( "woot!", :omg )
+# => "wootomg"
+
+"woot!".to_slug(:omg)
+# => "wootomg"
 ```
 
 Examples

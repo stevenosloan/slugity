@@ -3,8 +3,11 @@ require 'slugity'
 class String
 	include Slugity
 
-	def to_slug
-		slugity self
+  # call slugity on self
+  # @param key [Symbol] the matcher to use
+  # @return [String] the slugged string
+	def to_slug key=:default
+		slugity self, key
 	end
 
 end
