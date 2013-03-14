@@ -7,7 +7,7 @@ describe Slugity::Matchers do
   describe '#default_matchers' do
 
     it 'returns a hash table' do
-      Slugity::Matchers.default.class.should == Hash
+      Slugity::Matchers.use(:default).class.should == Hash
     end
 
   end
@@ -15,16 +15,20 @@ describe Slugity::Matchers do
   describe '#set_matcher' do
 
     it 'allows custom matchers to be set' do
-      Slugity.set_matcher( /\%/, 'percent' )
+      Slugity::Matchers.add :percent, true, {
+        /\%/ => 'percent'
+      }
 
-      slugity( "hello 20% of the world" ).should == "hello-20percent-of-the-world"
+      slugity( "hello 20% of the world", :percent ).should == "hello-20percent-of-the-world"
 
     end
 
     it 'allows matchers to be overwritten' do
-      Slugity.set_matcher( /\+/, 'not-plus' )
+      Slugity::Matchers.add :plus, true, {
+        /\+/ => 'not-plus'
+      }
 
-      slugity( "one + one" ).should == "one-not-plus-one"
+      slugity( "one + one", :plus ).should == "one-not-plus-one"
     end
 
   end

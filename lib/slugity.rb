@@ -6,11 +6,12 @@ module Slugity
 	# Converts the given string into a slug
 	#
 	# @param string [String] the string to slugity
+  # @param matcher [Symbol] the matcher to use
 	# @return [String] the slug version of the provided string
-  def slugity string
+  def slugity string, matcher=:default
   	string = Util.trim_string( string ).downcase
 
-    Slugity::Matchers.default.each do |match,replacement|
+    Slugity::Matchers.use(matcher).each do |match,replacement|
       string.gsub!( match, replacement )
     end
 
