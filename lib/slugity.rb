@@ -15,7 +15,7 @@ module Slugity
       string.gsub!( match, replacement )
     end
 
-    string.gsub!( /[^a-zA-Z0-9\-\_]/, '' )
+    string.gsub!( /[^a-z0-9\-\_]/, '' )
 
     return string
   end
