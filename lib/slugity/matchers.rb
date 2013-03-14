@@ -5,7 +5,6 @@ module Slugity
       # define the default matchers
       default: {
         /\s|\// => '-',
-        /\.|\'|\"|\<|\>|\,|\(|\)|\:/ => '',
         /\&/ => 'and',
         /\+/ => 'plus',
         /\=/ => 'equals'
