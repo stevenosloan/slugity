@@ -1,3 +1,6 @@
+# 0.2.1
+- move the default matchers to a seperate file
+
 # 0.2.0
 - add basic support for accented characters
 
