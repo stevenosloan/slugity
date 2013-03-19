@@ -11,7 +11,8 @@ test_strings = {
   "One + Two = Three" => "one-plus-two-equals-three",
   " hello world" => "hello-world",
   "hello world " => "hello-world",
-  "post id 1234" => "post-id-1234"
+  "post id 1234" => "post-id-1234",
+  "124 post id" => "124-post-id"
 }
 
 describe Slugity do
