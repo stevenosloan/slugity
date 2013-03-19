@@ -913,6 +913,7 @@ test_characters = {
   'ｙ' => 'y',
   'ｚ' => 'z',
   '～' => '-',
+  'ẞ' => 'b'
 }
 
 describe Slugity do
