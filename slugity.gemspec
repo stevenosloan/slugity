@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.platform      = Gem::Platform::RUBY
   
   s.summary       = 'Yet another slugging gem'
-  s.description   = %q{ Yet another slugging gem, this one makes sure you want to extend the String class instead of assuming. }
+  s.description   = %q{ Yet another slugging gem, convert a string to a slug with the option for custom mappings. }
   s.authors       = ["Steven Sloan"]
   s.email         = 'stevenosloan@gmail.com'
   s.homepage      = "http://github.com/stevenosloan/slugity"

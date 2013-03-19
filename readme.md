@@ -1,7 +1,7 @@
 Description
 ===========
 
-Yet another slugging gem. One that lets set custom matchers and doesn't assume you want to extend the String class.
+Yet another slugging gem, convert a string to a slug with the option for custom mappings.
 
 ---
 
