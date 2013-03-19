@@ -25,7 +25,7 @@ describe Slugity do
     end
 
     it "strips unrecognized characters" do
-      slugity( "aëòúi".encode("UTF-8") ).should == "ai"
+      slugity( "a…‡†i".encode("UTF-8") ).should == "ai"
     end
   end
 
