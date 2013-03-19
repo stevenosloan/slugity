@@ -10,7 +10,8 @@ test_strings = {
   "Freddie & Bananas" => "freddie-and-bananas",
   "One + Two = Three" => "one-plus-two-equals-three",
   " hello world" => "hello-world",
-  "hello world " => "hello-world"
+  "hello world " => "hello-world",
+  "post id 1234" => "post-id-1234"
 }
 
 describe Slugity do
