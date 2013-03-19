@@ -36,13 +36,21 @@ require 'slugity/extend_string'
 
 The default matcher set is currently small, but with custom matchers you can extend it or write a new set from the ground up.
 
+[View the full set here](lib/slugity/matchers/default.rb) or view a sample of the matched symbols.
+
 ```ruby
 default: {
   /\s|\// => '-',
-  /\.|\'|\"|\<|\>|\,|\(|\)|\:/ => '',
+  /\~|\～/ => '-',
+  /\＿/ => '_',
   /\&/ => 'and',
   /\+/ => 'plus',
-  /\=/ => 'equals'
+  /\=/ => 'equals',
+  /℡/ => 'tel',
+  /™/ => 'tm',
+  /℠/ => 'sm',
+  /²/ => '2',
+  /³/ => '3'
 }
 ```
 
