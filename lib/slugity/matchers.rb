@@ -25,4 +25,5 @@ module Slugity
   end
 end
 
-
+# add additional matchers
+require 'slugity/matchers/json_string'
