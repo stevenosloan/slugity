@@ -24,12 +24,17 @@ To use Slugity, require it and then include the module where needed. So:
 ```ruby
 require 'slugity'
 include Slugity
+
+slugity("one + two = three")
+# => "one-plus-two-equals-three"
 ```
-then gives you access to the `slugity` method. The `slugity` method takes a string and returns a slug.
 
 To include the `to_slug` method on the `String` class
 ```ruby
 require 'slugity/extend_string'
+
+"one + two = three".to_slug
+# => "one-plus-two-equals-three"
 ```
 
 ### Custom Matchers
@@ -69,6 +74,16 @@ slugity( "woot!", :omg )
 
 "woot!".to_slug(:omg)
 # => "wootomg"
+```
+
+### Non-Slug Matching
+
+Slugity is also good for manipulating strings that aren't destined to be slugs, such as strings in json. To do this though we'll need to use a different method included with Slugity, `stringity`. It operates just as `slugity` except that it doesn't escape unrecognized characters.
+
+```ruby
+string = %q{ a "quote" \ or so }
+stringity(string, :json_string)
+# => "a \"quote\" \\ or so"
 ```
 
 Examples

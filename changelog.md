@@ -1,3 +1,7 @@
+# 0.3.0
+- add a stringity method to allow for more general matching
+- add a :json_string matcher
+
 # 0.2.1
 - move the default matchers to a seperate file
 
