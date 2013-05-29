@@ -28,6 +28,7 @@ describe Slugity do
 
     it "handles non-strings like numbers" do
       slugity( 42 ).should == "42"
+      slugity( 123.456 ).should == "123456"
     end
 
     it "strips unrecognized characters" do

@@ -20,7 +20,7 @@ module Slugity
   # @param matcher [Symbol] the matcher to use
   # @return [String] the converted version of the provided string
   def stringity string, matcher=:default
-    string = Util.trim_string( string )
+    string = Util.normalize_string( string )
 
     Slugity::Matchers.use(matcher).each do |match, replacement|
       string.gsub!( match, replacement )

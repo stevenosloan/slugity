@@ -3,6 +3,13 @@ module Slugity
 
     class << self
 
+      def normalize_string string
+        trim_string(string.to_s)
+      rescue NoMethodError
+        raise ArgumentError, "You must pass an object that respond to #to_s"
+      end
+
+
       # Trims begining and ending spaces from the string
       #
       # @param string [String]
