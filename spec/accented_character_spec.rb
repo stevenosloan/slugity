@@ -898,7 +898,7 @@ describe Slugity do
   describe "#slugity()" do
     it "returns the correctly mapped character" do
       test_characters.each do |input,output|
-        p "matching #{input}"
+        # p "matching #{input}"
         slugity( input ).should == output
       end
     end
