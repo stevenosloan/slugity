@@ -26,6 +26,10 @@ describe Slugity do
       end
     end
 
+    it "handles non-strings like numbers" do
+      slugity( 42 ).should == "42"
+    end
+
     it "strips unrecognized characters" do
       slugity( "a…‡†i".encode("UTF-8") ).should == "ai"
     end
