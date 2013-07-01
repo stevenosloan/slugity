@@ -129,7 +129,7 @@ Testing
 $ bundle install
 # => installs the testing gems
 
-$ autotest
+$ rake
 # => runs the specs
 ```
 

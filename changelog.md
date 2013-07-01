@@ -1,3 +1,7 @@
+# 1.0.0
+- fix encoding issues for rubinius and mri 1.9.2
+- setup travis ci
+
 # 0.4.0
 - guard against non-string arguments, explicitly running #to_s
 
