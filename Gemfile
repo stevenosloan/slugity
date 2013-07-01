@@ -7,6 +7,7 @@ group :document do
 end
 
 group :test do
+  gem 'rake'
 	gem 'rspec'
 	gem 'autotest'
 end
