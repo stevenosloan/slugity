@@ -3,7 +3,7 @@ Description
 
 Yet another slugging gem, convert a string to a slug with the option for custom mappings.
 
-[![Build Status](https://travis-ci.org/stevenosloan/slugity.png?branch=travis)](https://travis-ci.org/stevenosloan/slugity)
+[![Build Status](https://travis-ci.org/stevenosloan/slugity.png?branch=master)](https://travis-ci.org/stevenosloan/slugity)
 
 ---
 
@@ -18,6 +18,16 @@ or with bundler
 ```ruby
 gem 'slugity'
 ```
+
+### Ruby Support
+
+Slugity is tested against and supports:
+
+- 2.0.0
+- 1.9.3
+- 1.9.2
+- jruby 1.7
+- rubinius 2.0
 
 Use
 ===
