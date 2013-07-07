@@ -3,7 +3,7 @@ Description
 
 Yet another slugging gem, convert a string to a slug with the option for custom mappings.
 
-[![Build Status](https://travis-ci.org/stevenosloan/slugity.png)](https://travis-ci.org/stevenosloan/slugity)
+[![Build Status](https://travis-ci.org/stevenosloan/slugity.png)](https://travis-ci.org/stevenosloan/slugity) [![Code Climate](https://codeclimate.com/github/stevenosloan/slugity.png)](https://codeclimate.com/github/stevenosloan/slugity)
 
 ---
 
