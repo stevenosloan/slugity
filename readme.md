@@ -15,6 +15,7 @@ gem install slugity
 ```
 
 or with bundler
+
 ```ruby
 gem 'slugity'
 ```
@@ -33,6 +34,7 @@ Use
 ===
 
 To use Slugity, require it and then include the module where needed. So:
+
 ```ruby
 require 'slugity'
 include Slugity
@@ -42,6 +44,7 @@ slugity("one + two = three")
 ```
 
 To include the `to_slug` method on the `String` class
+
 ```ruby
 require 'slugity/extend_string'
 
