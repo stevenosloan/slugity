@@ -1,3 +1,6 @@
+# 1.0.1
+- add license type to gemspec
+
 # 1.0.0
 - fix encoding issues for rubinius and mri 1.9.2
 - setup travis ci
