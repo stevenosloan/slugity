@@ -3,11 +3,11 @@ require 'slugity/matchers'
 
 module Slugity
 
-	# Converts the given string into a slug
-	#
-	# @param string [String] the string to slugity
+  # Converts the given string into a slug
+  #
+  # @param string [String] the string to slugity
   # @param matcher [Symbol] the matcher to use
-	# @return [String] the slug version of the provided string
+  # @return [String] the slug version of the provided string
   def slugity string, matcher=:default
     string = stringity(string, matcher).downcase
     string.gsub!( /[^a-z0-9\-\_]/, '' )
