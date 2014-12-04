@@ -22,17 +22,17 @@ describe Slugity do
   describe "#slugity()" do
     it "returns a properly formatted string" do
       test_strings.each do |input,output|
-        slugity( input ).should == output
+        expect( slugity( input ) ).to eq output
       end
     end
 
     it "handles non-strings like numbers" do
-      slugity( 42 ).should == "42"
-      slugity( 123.456 ).should == "123456"
+      expect( slugity( 42 ) ).to eq "42"
+      expect( slugity( 123.456 ) ).to eq "123456"
     end
 
     it "strips unrecognized characters" do
-      slugity( "a…‡†i".encode("UTF-8") ).should == "ai"
+      expect( slugity( "a…‡†i".encode("UTF-8") ) ).to eq "ai"
     end
   end
 

@@ -899,13 +899,13 @@ describe Slugity do
     it "returns the correctly mapped character" do
       test_characters.each do |input,output|
         # p "matching #{input}"
-        slugity( input ).should == output
+        expect( slugity( input ) ).to eq output
       end
     end
 
     it "correctly handles strings of characters" do
       test_strings.each do |input,output|
-        slugity( input ).should == output
+        expect( slugity( input ) ).to eq output
       end
     end
   end

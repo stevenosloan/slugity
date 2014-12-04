@@ -7,7 +7,7 @@ describe Slugity::Matchers do
   describe '#default_matchers' do
 
     it 'returns a hash table' do
-      Slugity::Matchers.use(:default).class.should == Hash
+      expect( Slugity::Matchers.use(:default).class ).to eq Hash
     end
 
   end
@@ -19,7 +19,7 @@ describe Slugity::Matchers do
         /\%/ => 'percent'
       }
 
-      slugity( "hello 20% of the world", :percent ).should == "hello-20percent-of-the-world"
+      expect( slugity( "hello 20% of the world", :percent ) ).to eq "hello-20percent-of-the-world"
 
     end
 
@@ -28,7 +28,7 @@ describe Slugity::Matchers do
         /\+/ => 'not-plus'
       }
 
-      slugity( "one + one", :plus ).should == "one-not-plus-one"
+      expect( slugity( "one + one", :plus ) ).to eq "one-not-plus-one"
     end
 
   end

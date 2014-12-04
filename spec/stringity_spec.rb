@@ -9,7 +9,7 @@ describe Slugity do
 
   describe "#stringity()" do
     it "does not strip unrecognized characters" do
-      stringity( "a…‡†i".encode("UTF-8") ).should == "a…‡†i"
+      expect( stringity("a…‡†i".encode("UTF-8")) ).to eq "a…‡†i"
     end
   end
 

@@ -13,7 +13,7 @@ describe ":json_string matcher" do
 
   it "correctly escapes strings" do
     test_strings.each do |input,output|
-      stringity( input, :json_string ).should == output
+      expect( stringity( input, :json_string ) ).to eq output
     end
   end
 

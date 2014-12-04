@@ -2,12 +2,7 @@ source 'https://rubygems.org'
 
 gemspec
 
-group :document do
-  gem 'yard'
-end
-
 group :test do
-  gem 'rake'
-	gem 'rspec'
-	gem 'autotest'
+  gem 'rake',   '~> 10.4.0'
+	gem 'rspec',  '~> 3.1.0'
 end
