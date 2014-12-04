@@ -51,6 +51,13 @@ require 'slugity/extend_string'
 # => "one-plus-two-equals-three"
 ```
 
+There is also a `Slugity::Convert` module that has class methods for each if you don't want to polute any modules with extra methods, so:
+```ruby
+require 'slugity'
+Slugity::Convert.slug 'one + two'
+# => 'one-plus-two'
+```
+
 ### Custom Matchers
 
 The default matcher set is currently small, but with custom matchers you can extend it or write a new set from the ground up.

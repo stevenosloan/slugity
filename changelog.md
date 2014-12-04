@@ -1,3 +1,5 @@
+- add `Slugity::Convert::slug` and `Slugity::Convert::string` methods
+
 # 1.0.1
 - add license type to gemspec
 
