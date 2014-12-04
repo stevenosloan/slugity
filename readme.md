@@ -24,11 +24,10 @@ gem 'slugity'
 
 Slugity is tested against and supports:
 
+- 2.1.x
 - 2.0.0
 - 1.9.3
-- 1.9.2
-- jruby 1.7
-- rubinius 2.0
+- rubinius 2.2
 
 Use
 ===
