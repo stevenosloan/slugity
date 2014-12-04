@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 def accented_characters
   {
     '²' => '2',
