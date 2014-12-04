@@ -1,5 +1,5 @@
 require 'spec_helper'
-require File.expand_path("../../lib/slugity/extend_string", __FILE__)
+require 'slugity/extend_string'
 
 describe String do
 

@@ -1,5 +1,5 @@
 # encoding: utf-8
-require 'slugity/matchers/default'
+require_relative 'matchers/default'
 
 module Slugity
   module Matchers
@@ -26,4 +26,4 @@ module Slugity
 end
 
 # add additional matchers
-require 'slugity/matchers/json_string'
+require_relative 'matchers/json_string'
